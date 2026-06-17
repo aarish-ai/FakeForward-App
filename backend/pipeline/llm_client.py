@@ -3,7 +3,7 @@ import logging
 import re
 import requests
 from openai import OpenAI
-from backend.config import OPENAI_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY
+from config import OPENAI_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY
 
 logger = logging.getLogger(__name__)
 

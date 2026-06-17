@@ -1,7 +1,7 @@
 import json
 import logging
-from backend.models import ClaimResult
-from backend.pipeline.llm_client import call_llm
+from models import ClaimResult
+from pipeline.llm_client import call_llm
 
 logger = logging.getLogger(__name__)
 

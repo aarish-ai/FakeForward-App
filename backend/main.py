@@ -1,11 +1,11 @@
 import logging
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from backend.models import AnalyzeRequest, AnalyzeResponse, ClaimResult
-from backend.pipeline.extractor import extract_claims
-from backend.pipeline.searcher import search_evidence
-from backend.pipeline.scorer import score_claim
-from backend.pipeline.verdict import aggregate_verdict
+from models import AnalyzeRequest, AnalyzeResponse, ClaimResult
+from pipeline.extractor import extract_claims
+from pipeline.searcher import search_evidence
+from pipeline.scorer import score_claim
+from pipeline.verdict import aggregate_verdict
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

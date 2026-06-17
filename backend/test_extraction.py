@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Enable logging to see the exception if any
 logging.basicConfig(level=logging.DEBUG)
 
-from backend.pipeline.extractor import extract_claims
+from pipeline.extractor import extract_claims
 
 text = """🚨 IMPORTANT NOTICE: WHATSAPP BECOMING PAID TONIGHT!! 🚨
 ⚠️ DO NOT IGNORE THIS ⚠️

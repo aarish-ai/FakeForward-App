@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from backend.models import ClaimResult
+from models import ClaimResult
 
 def aggregate_verdict(claims: List[ClaimResult]) -> Tuple[str, int]:
     """

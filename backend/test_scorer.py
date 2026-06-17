@@ -3,7 +3,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.pipeline.scorer import score_claim
+from pipeline.scorer import score_claim
 
 claim1 = "Cybercriminals are using 'verification code scams' to steal WhatsApp accounts."
 claim2 = "WhatsApp has a built-in feature called Two-Step Verification."

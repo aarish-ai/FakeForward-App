@@ -1,7 +1,7 @@
 import json
 import logging
 from typing import List
-from backend.pipeline.llm_client import call_llm
+from pipeline.llm_client import call_llm
 
 logger = logging.getLogger(__name__)
 

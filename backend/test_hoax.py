@@ -4,9 +4,9 @@ import sys
 # Ensure backend directory is in sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.pipeline.extractor import extract_claims
-from backend.pipeline.searcher import search_evidence
-from backend.pipeline.scorer import score_claim
+from pipeline.extractor import extract_claims
+from pipeline.searcher import search_evidence
+from pipeline.scorer import score_claim
 
 tests = [
     {
