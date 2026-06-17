@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeForward Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="aurora-container">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+    </div>
+    <main class="container">
+        <header id="main-header" class="hidden">
+            <h1>FakeForward Detector</h1>
+            <p>Paste a forwarded message to fact-check its claims.</p>
+        </header>
+
+        <section id="input-container" class="input-section idle">
+            <div class="chat-input-wrapper">
+                <textarea id="message-input" placeholder="Enter any viral WhatsApp forward message" rows="1"></textarea>
+                <button id="analyze-btn" title="Analyze" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+            <div class="controls hidden" id="controls-area">
+                <span id="char-count">0 / 3000</span>
+            </div>
+            <div id="error-message" class="hidden"></div>
+        </section>
+
+        <section id="results-section" class="hidden">
+            <div id="loading-state" class="hidden">
+                <div id="stage-progression">
+                    <div class="stage-bar-container">
+                        <div class="stage-label">Extracting Claims</div>
+                        <div class="stage-bar-track"><div class="stage-bar-fill" id="stage-0"></div></div>
+                    </div>
+                    <div class="stage-bar-container">
+                        <div class="stage-label">Searching Claims</div>
+                        <div class="stage-bar-track"><div class="stage-bar-fill" id="stage-1"></div></div>
+                    </div>
+                    <div class="stage-bar-container">
+                        <div class="stage-label">Grading Claims</div>
+                        <div class="stage-bar-track"><div class="stage-bar-fill" id="stage-2"></div></div>
+                    </div>
+                    <div class="stage-bar-container">
+                        <div class="stage-label">Synthesizing Verdict</div>
+                        <div class="stage-bar-track"><div class="stage-bar-fill" id="stage-3"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="verdict-container" class="hidden">
+                <div id="overall-verdict-card" class="verdict-card">
+                    <h2>Overall Verdict: <span id="overall-verdict-text"></span></h2>
+                    <p>Score: <span id="overall-score-text"></span>/100</p>
+                    <button id="copy-btn">Copy Result</button>
+                </div>
+                
+                <h3>Claims Breakdown</h3>
+                <div id="claims-list"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
