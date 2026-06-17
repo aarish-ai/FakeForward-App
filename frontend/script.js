@@ -8,8 +8,8 @@ const verdictContainer = document.getElementById('verdict-container');
 const errorMessage = document.getElementById('error-message');
 
 const MAX_CHARS = 3000;
-// Update this URL before deploying
-const API_URL = 'http://localhost:8000/analyze'; 
+// Use relative path for deployed environment
+const API_URL = '/analyze'; 
 
 const mainHeader = document.getElementById('main-header');
 const inputContainer = document.getElementById('input-container');
